@@ -4,6 +4,7 @@ export const Video = () => {
     return (
         <video
             width='100%'
+            height='auto'
             preload='true'
             muted
             loop

@@ -6,7 +6,7 @@ export const MapsView = () => {
 	return (
 		<>
 			<Navbar />
-			<Box pt="60px" fontFamily="Open Sans">
+			<Box pt="80px" fontFamily="Open Sans">
 				<Center>
 					<Text>Maps</Text>
 				</Center>

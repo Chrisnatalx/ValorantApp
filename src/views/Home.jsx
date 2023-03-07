@@ -14,7 +14,7 @@ export const Home = () => {
 	return (
 		<>
 			<Navbar />
-			<Box pt='60px'>
+			<Box pt='80px'>
 				<Center>
 					<Video />
 

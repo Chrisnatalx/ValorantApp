@@ -6,7 +6,7 @@ export const AgentesView = () => {
 	return (
 		<>
 			<Navbar />
-			<Box pt="60px" fontFamily="Open Sans">
+			<Box pt="80px" fontFamily="Open Sans">
 				<Center>
 					<Text>Agents</Text>
 				</Center>

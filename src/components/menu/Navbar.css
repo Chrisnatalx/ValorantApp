@@ -1,7 +1,9 @@
 .MenuButton:hover {
     transform: scale(1.25, 1.25);
 }
-
+.Logo{
+    color: #f9f9f9;
+}
 .Logo:hover {
     transform: scale(1.25, 1.25);
 }

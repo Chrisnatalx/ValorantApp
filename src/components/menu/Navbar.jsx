@@ -10,16 +10,17 @@ import {
 	Link,
 	Menu,
 } from "@chakra-ui/react";
+import { TbWorld } from 'react-icons/tb'
 
 export const Navbar = () => {
 	return (
 		<>
 			<Box
-				fontFamily="Inter"
+				fontFamily="FF Mark W05,Arial,sans-serif"
 				position="fixed"
 				zIndex="1001"
 				w="100%"
-				bg="#0C0B0B"
+				bg="#111"
 			>
 				<Flex
 					minWidth="max-content"
@@ -42,11 +43,11 @@ export const Navbar = () => {
 								<Button
 									className="MenuButton"
 									variant="link"
-									color="#FFFFFF"
+									color="#f9f9f9"
 									size="sm"
 									_hover={{ textDecoration: "underline solid #FF5A5A 2px" }}
 								>
-									Agents
+									AGENTS
 								</Button>
 							</Link>
 							<Link
@@ -57,11 +58,11 @@ export const Navbar = () => {
 								<Button
 									className="MenuButton"
 									variant="link"
-									color="#FFFFFF"
+									color="#f9f9f9"
 									size="sm"
 									_hover={{ textDecoration: "underline solid #FF5A5A 2px" }}
 								>
-									Maps
+									MAPS
 								</Button>
 							</Link>
 							<Link
@@ -72,13 +73,23 @@ export const Navbar = () => {
 								<Button
 									className="MenuButton"
 									variant="link"
-									color="#FFFFFF"
+									color="#f9f9f9"
 									size="sm"
 									_hover={{ textDecoration: "underline solid #FF5A5A 2px" }}
 								>
-									Weapons
+									WEAPONS
 								</Button>
 							</Link>
+						</ButtonGroup>
+						<ButtonGroup display="flex" justifyContent="flex-end" gap={2}>
+							<Button
+								size="sm"
+								color='#f9f9f9'
+								_hover={{ bg: '#424242' }}
+								variant='ghost'>
+								<TbWorld />
+							</Button>
+							<Button size="sm" _hover={{ bg: '#FF5A5A' }} colorScheme='red.900'>PLAY NOW</Button>
 						</ButtonGroup>
 					</Menu>
 				</Flex>
