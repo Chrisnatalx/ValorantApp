@@ -8,7 +8,7 @@ export const Card = ({data}) => {
         <Container maxW="container.xl">
             <Grid 
                 templateColumns="repeat(auto-fit,minmax(300px,1fr))"
-				justifyItems="center">
+				        justifyItems="center">
                     {data?.map((game)=>(
                         <GridItem key={game.uuid}>
                         <CardItem {...game} />
