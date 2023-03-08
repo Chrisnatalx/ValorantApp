@@ -5,7 +5,7 @@ import { AgentCardItem } from './AgentCardItem'
 
 export const AgentCard = ({ data }) => {
   return (
-    <Center bg='#FFF8E8' border='2px #111'>
+    <Center bg='#FFF8E8' >
       <Container maxW="container.xl">
         <Grid justifyItems="center">
           {

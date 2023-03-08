@@ -1,4 +1,4 @@
-import { Box, Divider, Grid, GridItem, Heading, Image, Text } from '@chakra-ui/react'
+import { Box, Divider, Grid, GridItem, Heading, Image, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverTrigger, Text } from '@chakra-ui/react'
 import React from 'react'
 
 export const AgentCardItem = ({ displayName, fullPortrait, description, role, abilities }) => {
@@ -9,7 +9,7 @@ export const AgentCardItem = ({ displayName, fullPortrait, description, role, ab
     <Box pt='80px' bg='#FFF8E8' w='100%'>
       <Grid gridTemplateColumns='1fr 1fr 1fr'>
         <GridItem>
-          <Image src={fullPortrait} alt={displayName} _hover={{ transform: 'scale(1.3,1.3)' }} />
+          <Image src={fullPortrait} alt={displayName} _hover={{ transform: 'scale(1.25,1.3)' }} />
         </GridItem>
         <GridItem>
           <Heading as='h2' size='3xl'>{displayName}</Heading>
@@ -20,7 +20,22 @@ export const AgentCardItem = ({ displayName, fullPortrait, description, role, ab
           <Heading as='h3' size='sm' mb='10px'> Special Abilities :</Heading>
           <Box bg='#0f1923' display='flex' justifyContent='space-around' h='70px' alignItems='center' >
             {abilities?.map((ability) => (
-              <Image key={ability.slot} src={ability.displayIcon} w='50px' h='50px' _hover={{ transform: 'scale(1.4,1.4)', bg: '#ff4655' }} />
+              <Popover key={ability.slot} >
+                <PopoverTrigger>
+                  <Image
+                    src={ability.displayIcon}
+                    w='50px'
+                    h='50px'
+                    _hover={{ transform: 'scale(1.4,1.4)', bg: '#ff4655' }}
+                    _expanded={{ transform: 'scale(1.4,1.4)', bg: '#ff4655' }}
+                  />
+                </PopoverTrigger>
+                <PopoverContent bg='#0f1923' color='#ece8e1' fontSize='14px' p={4}>
+                  <PopoverCloseButton _hover={{ bg: '#ff4655' }} />
+                  <PopoverBody>{ability.description}</PopoverBody>
+                </PopoverContent>
+              </Popover>
+
             ))}
           </Box>
 
