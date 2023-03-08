@@ -2,8 +2,11 @@
     transform: scale(1.25, 1.25);
 }
 .Logo{
-    color: #f9f9f9;
+    margin-top: 5px;
 }
 .Logo:hover {
     transform: scale(1.25, 1.25);
+}
+.LogoRiot:hover{
+    transform: scale(1.25, 1.25)
 }
