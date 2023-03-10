@@ -1,5 +1,6 @@
-import { Box, Divider, Grid, GridItem, Heading, Image, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverTrigger, Text } from '@chakra-ui/react'
 import React from 'react'
+import 'animate.css'
+import { Box, Divider, Grid, GridItem, Heading, Image, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverTrigger, Text } from '@chakra-ui/react'
 
 export const AgentCardItem = ({ displayName, fullPortrait, description, role, abilities }) => {
 
@@ -8,10 +9,10 @@ export const AgentCardItem = ({ displayName, fullPortrait, description, role, ab
   return (
     <Box pt='80px' bg='#FFF8E8' w='100%'>
       <Grid gridTemplateColumns='1fr 1fr 1fr'>
-        <GridItem>
+        <GridItem className='animate__animated animate__fadeInLeft'>
           <Image src={fullPortrait} alt={displayName} _hover={{ transform: 'scale(1.25,1.3)' }} />
         </GridItem>
-        <GridItem>
+        <GridItem className='animate__animated animate__fadeInRight' >
           <Heading as='h2' size='3xl'>{displayName}</Heading>
           <Divider pt='10px' mb='10px' />
           <Heading as='h5' size='sm'> Role: {role.displayName}</Heading>
@@ -20,7 +21,7 @@ export const AgentCardItem = ({ displayName, fullPortrait, description, role, ab
           <Heading as='h3' size='sm' mb='10px'> Special Abilities :</Heading>
           <Box bg='#0f1923' display='flex' justifyContent='space-around' h='70px' alignItems='center' >
             {abilities?.map((ability) => (
-              <Popover key={ability.slot} >
+              <Popover key={ability.slot}  >
                 <PopoverTrigger>
                   <Image
                     src={ability.displayIcon}
@@ -38,9 +39,7 @@ export const AgentCardItem = ({ displayName, fullPortrait, description, role, ab
 
             ))}
           </Box>
-
         </GridItem>
-        <GridItem></GridItem>
       </Grid>
     </Box >
   )
