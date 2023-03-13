@@ -2,7 +2,8 @@ import React from "react";
 import { Navbar } from "../components/menu/Navbar";
 import { Box, Center, Text } from "@chakra-ui/react";
 import { useFetch } from "../hooks/useFetch";
-import { WeaponsCard } from "../components/cards/WeaponsCard";
+import { WeaponsCard } from "../components/cards/weaponcard/WeaponsCard";
+
 
 export const WeaponsView = () => {
 	const { data, loading } = useFetch('https://valorant-api.com/v1/weapons')

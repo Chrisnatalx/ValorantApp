@@ -3,8 +3,8 @@ import { Link as RouterLink } from "react-router-dom"
 import { Navbar } from "../components/menu/Navbar";
 import { Sidebar } from "../components/sidebar/Sidebar";
 import { Video } from "../components/Video";
-import { useFetch } from "../hooks/useFetch";
 import { Box, Button, Center, Container, Link, Text } from "@chakra-ui/react";
+
 
 export const Home = () => {
 
@@ -26,6 +26,7 @@ export const Home = () => {
 						<Button colorScheme='red' color='#ece8e1' _hover={{ bg: '#0f1923' }} w='300px' h='60px'>PLAY FREE</Button>
 					</Link>
 				</Center>
+
 			</Box>
 		</>
 	);

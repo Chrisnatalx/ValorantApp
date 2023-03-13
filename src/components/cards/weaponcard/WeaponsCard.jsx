@@ -3,6 +3,7 @@ import React from 'react'
 import { WeaponsCardItem } from './WeaponsCardItem'
 
 export const WeaponsCard = ({ data }) => {
+
     return (
         <Container maxW="container.xl"  >
             <Grid
