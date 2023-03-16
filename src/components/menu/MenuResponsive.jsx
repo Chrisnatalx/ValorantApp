@@ -55,7 +55,7 @@ export const MenuResponsive = () => {
                                 _hover={{ bg: '#424242' }}
                                 variant='ghost' />
                             <DrawerBody bg='#111'>
-                                <ButtonGroup display='flex' flexDirection='column' w='100%' gap={8} alignItems='flex-start'>
+                                <ButtonGroup display='flex' flexDirection='column' w='100%' gap={10} alignItems='flex-start'>
                                     <Link
                                         as={RouterLink}
                                         to="/Agents"
@@ -81,7 +81,7 @@ export const MenuResponsive = () => {
                                             variant="link"
                                             color="#f9f9f9"
                                             size="sm"
-                                            _hover={{ textDecoration: "underline solid #ff4655 2px" }}
+                                            _hover={{ textDecoration: "underline solid #FF5A5A 2px" }}
                                         >
                                             MAPS
                                         </Button>
@@ -96,20 +96,21 @@ export const MenuResponsive = () => {
                                             variant="link"
                                             color="#f9f9f9"
                                             size="sm"
-                                            _hover={{ textDecoration: "underline solid #ff4655 2px" }}
+                                            _hover={{ textDecoration: "underline solid #FF5A5A 2px" }}
                                         >
                                             WEAPONS
                                         </Button>
                                     </Link>
                                     <MenuButton as={Button} variant="link"
-                                        _hover={{ textDecoration: "underline solid #ff4655 2px" }}
-                                        _expanded={{ textDecoration: "underline solid #ff4655 2px", transform: 'scale(1.25,1.25)' }}
+                                        _hover={{ textDecoration: "underline solid #FF5A5A 2px" }}
+                                        _expanded={{ textDecoration: "underline solid #FF5A5A 2px", transform: 'scale(1.25,1.25)' }}
                                         color="#f9f9f9"
                                         size="sm" rightIcon={<ChevronDownIcon />}
-                                        _active={{ color: '#f9f9f9' }}>
+                                        _active={{ color: '#f9f9f9' }}
+                                        m={0}>
                                         OUR SOCIALS
                                     </MenuButton>
-                                    <MenuList bg='#1f1f1f' borderColor='#1f1f1f' justifyContent='center' >
+                                    <MenuList bg='#1f1f1f' borderColor='#1f1f1f' justifyContent='center' p={0} m={0}>
                                         <Link as={RouterLink} to='https://twitter.com/playvalorant' style={{ textDecoration: 'none' }}>
                                             <MenuItem bg='#1f1f1f' color='#DBD9D9' _hover={{ bg: '#424242', color: '#f2f2f2' }}>
                                                 Twitter
