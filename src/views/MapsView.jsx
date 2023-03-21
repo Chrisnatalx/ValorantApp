@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Navbar } from "../components/menu/Navbar";
 import { Box, Center, Text } from "@chakra-ui/react";
-import { useFetch } from "../hooks/useFetch";
-import { MapCard } from "../components/cards/mapscard/MapCard";
-import { MapsCard2 } from "../components/cards/mapscard/MapsCard2";
+import { MapsCard } from "../components/cards/mapscard/MapsCard";
+
 
 export const MapsView = () => {
 	const [data, setdata] = useState(null)
@@ -25,7 +24,7 @@ export const MapsView = () => {
 				{
 					data ?
 						<Center>
-							<MapsCard2 data={data.data} setId={setId} setdata={setdata} ></MapsCard2>
+							<MapsCard data={data.data} setId={setId} setdata={setdata} ></MapsCard>
 						</Center>
 						: <Text>Loading</Text>
 				}

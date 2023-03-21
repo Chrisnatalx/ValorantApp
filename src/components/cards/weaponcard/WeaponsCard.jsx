@@ -7,7 +7,7 @@ export const WeaponsCard = ({ data }) => {
     return (
         <Container maxW="container.xl" bg='#0f1923'  >
             <Grid
-                templateColumns="repeat(auto-fit,minmax(300px,1fr))"
+                templateColumns="repeat(auto-fit,minmax(330px,1fr))"
                 justifyItems="center"
             >
                 {data.map((weapon) => (

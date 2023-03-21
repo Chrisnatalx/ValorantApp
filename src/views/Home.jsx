@@ -3,7 +3,7 @@ import { Link as RouterLink } from "react-router-dom"
 import { Navbar } from "../components/menu/Navbar";
 import { ValorantLogo } from "../components/logo/ValorantLogo";
 import { Video } from "../components/Video";
-import { Box, Button, Center, Container, Flex, Link, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
 
 
 export const Home = () => {
@@ -22,12 +22,6 @@ export const Home = () => {
 						<Button colorScheme='red' color='#ece8e1' _hover={{ bg: '#0f1923' }} w='200px' h='40px'>PLAY FREE</Button>
 					</Link>
 				</Flex>
-				{/* <Center position='absolute' top='55%' left='42%' p={0}>
-					<Link as={RouterLink} to='https://playvalorant.com/en-us/download/' style={{ textDecoration: "none" }}>
-						<Button colorScheme='red' color='#ece8e1' _hover={{ bg: '#0f1923' }} w='300px' h='60px'>PLAY FREE</Button>
-					</Link>
-				</Center> */}
-
 			</Box>
 		</>
 	);
