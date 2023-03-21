@@ -3,6 +3,8 @@ import { Context } from "../../../../RickyMortyWiki/RickAndMorty/src/context/Con
 
 export const ContextProvider = ({ children }) => {
 
-	
-	return <Context.Provider value={{}}>{children}</Context.Provider>;
+
+	return <Context.Provider value={{
+
+	}}>{children}</Context.Provider>;
 };

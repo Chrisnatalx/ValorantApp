@@ -1,6 +1,6 @@
 import * as React from "react"
 
-export const Sidebar = (props) => (
+export const ValorantLogo = (props) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 690 98.9"

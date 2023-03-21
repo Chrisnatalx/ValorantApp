@@ -21,7 +21,7 @@ export const AgentCardLarge = ({ agent }) => {
                             <Heading as='h3' size='sm' mb='10px'> Special Abilities :</Heading>
                         </Box>
 
-                        <Box bg='#0f1923' display='flex' justifyContent='space-around' h='70px' alignItems='center' zIndex='999'>
+                        <Box bg='#0f1923' display='flex' justifyContent='space-around' h='70px' alignItems='center' p={2}>
                             {abilities?.map((ability) => (
                                 <Popover key={ability.slot}  >
                                     <PopoverTrigger >

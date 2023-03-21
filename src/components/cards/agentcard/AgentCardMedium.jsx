@@ -9,7 +9,7 @@ export const AgentCardMedium = ({ agent }) => {
             <Box pt='80px' bg='#FFF8E8' w='100%' >
                 <Grid gridTemplateRows='1fr 1fr'  >
                     <GridItem>
-                        <Image src={fullPortrait} alt={displayName} _hover={{ transform: 'scale(1.25,1.3)' }} />
+                        <Image src={fullPortrait} alt={displayName} />
                     </GridItem>
                     <GridItem>
                         <Box>
