@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Navbar } from "../components/menu/Navbar";
 import { Box, Center, Text } from "@chakra-ui/react";
 import { MapsCard } from "../components/cards/mapscard/MapsCard";
+import { Footer } from "../components/footer/Footer";
 
 
 export const MapsView = () => {
@@ -29,6 +30,7 @@ export const MapsView = () => {
 						: <Text>Loading</Text>
 				}
 			</Box>
+			<Footer />
 		</>
 	);
 };

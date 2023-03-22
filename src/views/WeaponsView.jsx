@@ -3,6 +3,7 @@ import { Navbar } from "../components/menu/Navbar";
 import { Box, Center, Text } from "@chakra-ui/react";
 import { useFetch } from "../hooks/useFetch";
 import { WeaponsCard } from "../components/cards/weaponcard/WeaponsCard";
+import { Footer } from "../components/footer/Footer";
 
 
 export const WeaponsView = () => {
@@ -19,6 +20,7 @@ export const WeaponsView = () => {
 						: <Text>{loading}</Text>
 				}
 			</Box>
+			<Footer />
 		</>
 	);
 };

@@ -4,6 +4,7 @@ import { Navbar } from "../components/menu/Navbar";
 import { ValorantLogo } from "../components/logo/ValorantLogo";
 import { Video } from "../components/Video";
 import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
+import { Footer } from "../components/footer/Footer";
 
 
 export const Home = () => {
@@ -23,6 +24,7 @@ export const Home = () => {
 					</Link>
 				</Flex>
 			</Box>
+			<Footer></Footer>
 		</>
 	);
 };
