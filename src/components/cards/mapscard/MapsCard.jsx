@@ -46,12 +46,12 @@ export const MapsCard = ({ data, setId }) => {
                 </Center>
                     :
                     <Center flexDirection='column' w='100%'>
-                        <Select m={4} righticon={<ChevronDownIcon />} w='200px' onChange={handleChange} bg='#8b978f' borderColor='#8b978f' fontFamily="FF Mark W05,Arial,sans-serif">
-                            {maps.map(({ value, name }) => <option key={value} value={value} color='#FFF'>{name}</option>)}
+                        <Select m={4} righticon={<ChevronDownIcon />} w='200px' onChange={handleChange} bg='#8b978f' borderColor='#8b978f' fontFamily="FF Mark W05,Arial,sans-serif" >
+                            {maps.map(({ value, name }) => <option key={value} value={value}  >{name}</option>)}
 
                         </Select>
                         <Container maxW='container.xl'>
-                            <Image src={splash} alt={displayName} borderRadius='xl' h='auto' mb={4} />
+                            <Image src={splash} alt={displayName} borderRadius='xl' h='auto' minHeight='250px' mb={4} />
                         </Container>
                     </Center>
             }

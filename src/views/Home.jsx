@@ -1,30 +1,19 @@
-import React from "react";
-import { Link as RouterLink } from "react-router-dom"
-import { Navbar } from "../components/menu/Navbar";
-import { ValorantLogo } from "../components/logo/ValorantLogo";
-import { Video } from "../components/Video";
-import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
-import { Footer } from "../components/footer/Footer";
+import { useMediaQuery } from "@chakra-ui/react";
+import React, { useEffect } from "react";
+import { HomeLarge } from "../components/home/HomeLarge";
+import { HomeResponsive } from "../components/home/HomeResponsive";
 
 
 export const Home = () => {
 
-
+	const [isLargerThan800] = useMediaQuery('(min-width: 700px)')
+	useEffect(() => {
+		if (!isLargerThan800) return
+	}, [isLargerThan800])
 
 	return (
 		<>
-			<Navbar />
-			<Box pt='80px' position='relative' overflowX='hidden' w='100%' fontFamily="FF Mark W05,Arial,sans-serif" minHeight='800px'>
-				<Video h='100%' />
-				<Flex direction='column' position='absolute' top='200px' width='100vw' alignItems='center' >
-					<ValorantLogo width={'50%'} />
-					<Text color='whiteAlpha.900'>A 5v5 character-based tactical shooter</Text>
-					<Link as={RouterLink} to='https://playvalorant.com/en-us/download/' style={{ textDecoration: "none" }} mt={10}>
-						<Button colorScheme='red' color='#ece8e1' _hover={{ bg: '#0f1923' }} w='200px' h='40px'>PLAY FREE</Button>
-					</Link>
-				</Flex>
-			</Box>
-			<Footer></Footer>
+			{isLargerThan800 ? <HomeLarge /> : <HomeResponsive />}
 		</>
 	);
 };
