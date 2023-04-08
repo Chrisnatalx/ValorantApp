@@ -13,10 +13,8 @@ export const WeaponsView = () => {
 			<Navbar />
 			<Box pt="80px" fontFamily="FF Mark W05,Arial,sans-serif" bg='#0f1923'>
 				{
-					data ?
-						<Center>
-							<WeaponsCard data={data.data}></WeaponsCard>
-						</Center>
+					data
+						? <WeaponsCard data={data.data}></WeaponsCard>
 						: <Text>{loading}</Text>
 				}
 			</Box>

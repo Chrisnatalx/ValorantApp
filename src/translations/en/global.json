@@ -1,0 +1,25 @@
+{
+    "menu" : {
+        "agents" : "AGENTS",
+        "maps": "MAPS",
+        "our_social" : "OUR SOCIALS",
+        "weapons": "WEAPONS",
+        "play_now":"PLAY NOW",
+        "description" :"A 5v5 character-based tactical shooter",
+        "play_free" : "PLAY FREE"
+    },
+    "footer":{
+        "description":"Application developed by Christian Natale"
+
+    },
+    "weapons":{
+        "cost":"Cost in game",
+        "category": "Category"
+    },
+    "agents" : {
+        "url":"'https://valorant-api.com/v1/agents?isPlayableCharacter=true'",
+        "role":"Role",
+        "abilities":"Specials Abilities"
+    }
+
+}

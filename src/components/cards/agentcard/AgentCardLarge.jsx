@@ -1,9 +1,10 @@
 import React from 'react'
 import { Box, Divider, Grid, GridItem, Heading, Image, Popover, PopoverBody, PopoverCloseButton, PopoverContent, PopoverTrigger, Text } from '@chakra-ui/react'
-
+import { useTranslation } from "react-i18next";
 export const AgentCardLarge = ({ agent }) => {
 
     const { displayName, fullPortrait, description, role, abilities } = agent
+    const [t] = useTranslation("global")
     return (
         <>
             <Box pt='80px' bg='#FFF8E8' w='100%' >
@@ -15,10 +16,10 @@ export const AgentCardLarge = ({ agent }) => {
                         <Box>
                             <Heading as='h2' size='3xl'>{displayName}</Heading>
                             <Divider pt='10px' mb='10px' />
-                            <Heading as='h5' size='sm'> Role: {role.displayName}</Heading>
+                            <Heading as='h5' size='sm'> {t("agents.role")}: {role.displayName}</Heading>
                             <Text>{description}</Text>
                             <Divider pt='10px' mb='10px' />
-                            <Heading as='h3' size='sm' mb='10px'> Special Abilities :</Heading>
+                            <Heading as='h3' size='sm' mb='10px'> {t("agents.abilities")} :</Heading>
                         </Box>
 
                         <Box bg='#0f1923' display='flex' justifyContent='space-around' h='70px' alignItems='center' p={2}>

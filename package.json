@@ -13,10 +13,12 @@
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "i18next": "^22.4.14",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.8.2",
     "sort-by": "^1.2.0"

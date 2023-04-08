@@ -37,10 +37,10 @@ export const MapsCard = ({ data, setId }) => {
 
         <Box display='flex' flexDirection='column'>
             {
-                isLargerThan800 ? <Center flexDirection='column' w='100%'><ButtonGroup color='#FFF' display='flex' justifyContent='space-around' alignItems='center' w='100%' fontFamily="FF Mark W05,Arial,sans-serif" my={2}>
+                isLargerThan800 ? <Center flexDirection='column' w='100%' ><ButtonGroup color='#FFF' display='flex' justifyContent='space-around' alignItems='center' w='100%' fontFamily="FF Mark W05,Arial,sans-serif" my={2}>
                     {maps.map(({ value, name }) => <Button m={1} color='#FFF' key={value} value={value} variant='link' onClick={() => handleClick(value)} >{name}</Button>)}
                 </ButtonGroup>
-                    <Container maxW='container.xl'>
+                    <Container maxW='container.xl'  >
                         <Image src={splash} alt={displayName} borderRadius='xl' mb={4} />
                     </Container>
                 </Center>

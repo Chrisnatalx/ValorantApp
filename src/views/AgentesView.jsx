@@ -4,8 +4,10 @@ import { useFetch } from "../hooks/useFetch";
 import { Box, Center, Text } from "@chakra-ui/react";
 import { AgentCard } from "../components/cards/agentcard/AgentCard";
 import { Footer } from "../components/footer/Footer";
-
+import { useTranslation } from "react-i18next";
 export const AgentesView = () => {
+
+	const [t] = useTranslation("global")
 	const { data, loading } = useFetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true')
 	return (
 		<>

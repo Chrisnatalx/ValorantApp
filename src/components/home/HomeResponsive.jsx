@@ -5,8 +5,10 @@ import { Footer } from '../footer/Footer'
 import { ValorantLogo } from '../logo/ValorantLogo'
 import { Navbar } from '../menu/Navbar'
 import { Video } from '../Video'
+import { useTranslation } from 'react-i18next';
 
 export const HomeResponsive = () => {
+    const [t] = useTranslation("global")
     return (
         <>
             <Navbar />
@@ -14,9 +16,9 @@ export const HomeResponsive = () => {
                 <Video objectFit='cover' />
                 <Flex direction='column' position='absolute' top='100px' width='100vw' alignItems='center' >
                     <ValorantLogo width={'30%'} />
-                    <Text color='whiteAlpha.900' size='sm'>A 5v5 character-based tactical shooter</Text>
+                    <Text color='whiteAlpha.900' size='sm'>{t("menu.description")}</Text>
                     <Link as={RouterLink} to='https://playvalorant.com/en-us/download/' style={{ textDecoration: "none" }} mt={7}>
-                        <Button colorScheme='red' color='#ece8e1' _hover={{ bg: '#0f1923' }} w='200px' h='40px'>PLAY FREE</Button>
+                        <Button colorScheme='red' color='#ece8e1' _hover={{ bg: '#0f1923' }} w='200px' h='40px'>{t("menu.play_free")}</Button>
                     </Link>
                 </Flex>
             </Box>

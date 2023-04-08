@@ -6,10 +6,13 @@ import { Box, Button, ButtonGroup, Drawer, DrawerBody, DrawerCloseButton, Drawer
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { TbWorld } from 'react-icons/tb';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { useTranslation } from "react-i18next";
 
 export const MenuResponsive = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [placement, setPlacement] = React.useState('right')
+
+    const [t, i18n] = useTranslation("global")
     return (
         <Box fontFamily="FF Mark W05,Arial,sans-serif"
 
@@ -32,13 +35,19 @@ export const MenuResponsive = () => {
                         </Link>
                     </ButtonGroup>
                     <ButtonGroup display="flex" justifyContent="flex-end" alignItems='center' gap={8}>
-                        <IconButton
+                        <MenuButton as={IconButton}
                             size="sm"
                             color='#f9f9f9'
                             _hover={{ bg: '#424242' }}
-                            variant='ghost'>
-                            <TbWorld />
-                        </IconButton>
+                            variant='ghost'
+                            _active={{ color: '#f9f9f9' }}
+                            icon={<TbWorld />}>
+
+                        </MenuButton>
+                        <MenuList bg='#1f1f1f' borderColor='#1f1f1f'>
+                            <MenuItem bg='#1f1f1f' color='#DBD9D9' _hover={{ bg: '#424242', color: '#f2f2f2' }} onClick={() => i18n.changeLanguage("en")}>EN</MenuItem>
+                            <MenuItem bg='#1f1f1f' color='#DBD9D9' _hover={{ bg: '#424242', color: '#f2f2f2' }} onClick={() => i18n.changeLanguage("es")}>ES</MenuItem>
+                        </MenuList>
                         <IconButton size="sm"
                             color='#f9f9f9'
                             _hover={{ bg: '#424242' }}
@@ -47,6 +56,8 @@ export const MenuResponsive = () => {
                             <GiHamburgerMenu />
                         </IconButton>
                     </ButtonGroup>
+                </Menu>
+                <Menu>
 
                     <Drawer placement={placement} onClose={onClose} isOpen={isOpen} size='xs'>
                         <DrawerOverlay />
@@ -68,7 +79,7 @@ export const MenuResponsive = () => {
                                             size="sm"
                                             _hover={{ textDecoration: "underline solid #FF5A5A 2px" }}
                                         >
-                                            AGENTS
+                                            {t("menu.agents")}
                                         </Button>
                                     </Link>
                                     <Link
@@ -83,7 +94,7 @@ export const MenuResponsive = () => {
                                             size="sm"
                                             _hover={{ textDecoration: "underline solid #FF5A5A 2px" }}
                                         >
-                                            MAPS
+                                            {t("menu.maps")}
                                         </Button>
                                     </Link>
                                     <Link
@@ -98,7 +109,7 @@ export const MenuResponsive = () => {
                                             size="sm"
                                             _hover={{ textDecoration: "underline solid #FF5A5A 2px" }}
                                         >
-                                            WEAPONS
+                                            {t("menu.weapons")}
                                         </Button>
                                     </Link>
                                     <MenuButton as={Button} variant="link"
@@ -108,7 +119,7 @@ export const MenuResponsive = () => {
                                         size="sm" rightIcon={<ChevronDownIcon />}
                                         _active={{ color: '#f9f9f9' }}
                                         m={0}>
-                                        OUR SOCIALS
+                                        {t("menu.our_social")}
                                     </MenuButton>
                                     <MenuList bg='#1f1f1f' borderColor='#1f1f1f' justifyContent='center' p={0} m={0}>
                                         <Link as={RouterLink} to='https://twitter.com/playvalorant' style={{ textDecoration: 'none' }}>
@@ -141,7 +152,7 @@ export const MenuResponsive = () => {
                                         </Link>
                                     </MenuList>
                                     <Link as={RouterLink} to='https://auth.riotgames.com/login#client_id=prod-xsso-playvalorant&code_challenge=2nBlSKqP0TIhkVNc185OGXrw22wjIViDZm-vjJanyJE&code_challenge_method=S256&redirect_uri=https%3A%2F%2Fxsso.playvalorant.com%2Fredirect&response_type=code&scope=openid%20account&state=f55fc23bc2e96e6991914241d6&uri=https%3A%2F%2Fplayvalorant.com%2Fen-us%2F' style={{ textDecoration: 'none' }}>
-                                        <Button size="sm" _hover={{ bg: '#ff4655' }} colorScheme='red' color='#111'>PLAY NOW</Button>
+                                        <Button size="sm" _hover={{ bg: '#ff4655' }} colorScheme='red' color='#111'>{t("menu.play_now")}</Button>
                                     </Link>
                                 </ButtonGroup>
                             </DrawerBody>

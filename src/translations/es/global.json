@@ -1,0 +1,24 @@
+{
+    "menu" : {
+        "agents" : "AGENTES",
+        "maps": "MAPAS",
+        "our_social" : "NUESTRAS REDES",
+        "weapons": "ARMAS",
+        "play_now":"JUGAR AHORA",
+        "description" :"Un shooter táctico 5v5 basado en personajes",
+        "play_free" : "JUGA GRATIS"
+    
+},
+    "footer":{
+        "description":"Aplicación desarrollada por Christian Natale"
+    },
+    "weapons":{
+        "cost":"Costo en el  juego",
+        "category": "Categoría"
+    },
+    "agents" : {
+        "url":"'https://valorant-api.com/v1/agents?isPlayableCharacter=true&language=es-ES'",
+        "role":"Rol",
+        "abilities":"Habilidades Especiales"
+    }
+}
