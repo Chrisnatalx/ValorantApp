@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Logo } from "../logo/Logo";
 import { RiotLogo } from "../logo/RiotLogo";
+import { useTranslation } from "react-i18next";
+
 import "./Navbar.css";
 import {
     Box,
@@ -17,7 +19,6 @@ import {
 } from "@chakra-ui/react";
 import { TbWorld } from 'react-icons/tb'
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { useTranslation } from "react-i18next";
 
 export const MenuLarge = () => {
     const [t, i18n] = useTranslation("global")

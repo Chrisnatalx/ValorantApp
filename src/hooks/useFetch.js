@@ -10,6 +10,6 @@ export const useFetch = (url) => {
 			.then((response) => response.json())
 			.then((data) => setData(data))
 			.finally(() => setLoading(false));
-	}, []);
+	}, [url]);
 	return { data, loading };
 };

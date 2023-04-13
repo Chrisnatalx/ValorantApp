@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Navbar } from "../components/menu/Navbar";
-import { Box, Center, Text } from "@chakra-ui/react";
+import { Box, Center, Spinner, Text } from "@chakra-ui/react";
 import { MapsCard } from "../components/cards/mapscard/MapsCard";
 import { Footer } from "../components/footer/Footer";
 
@@ -27,7 +27,9 @@ export const MapsView = () => {
 						<Center>
 							<MapsCard data={data.data} setId={setId} setdata={setdata} ></MapsCard>
 						</Center>
-						: <Text>Loading</Text>
+						: <Center>
+							<Spinner color='red.500' size='xl' />
+						</Center>
 				}
 			</Box>
 			<Footer />
